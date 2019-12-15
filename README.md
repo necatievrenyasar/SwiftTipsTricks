@@ -34,7 +34,7 @@ extension Location: CustomDebugStringConvertible {
     }
 }
 
-//Logger that is work only class/struct is extended CustomDebugStringConvertible
+//Logger is work only class/struct that is extended CustomDebugStringConvertible
 struct Logger<T> where T: CustomDebugStringConvertible {
     func debug(ref: T) {
         print(ref)
