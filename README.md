@@ -5,6 +5,7 @@ Here's some Swift tips & tricks.
 
 ## Table of contents
 
+[#10 deinit](https://github.com/necatievrenyasar/SwiftTipsTricks#10-deinit)   
 [#9 compactMap](https://github.com/necatievrenyasar/SwiftTipsTricks#9-compactmap)   
 [#8 CustomStringConvertible](https://github.com/necatievrenyasar/SwiftTipsTricks#8-customstringconvertible)   
 [#7 Optional Protocol](https://github.com/necatievrenyasar/SwiftTipsTricks#7-optional-protocol)   
@@ -14,6 +15,26 @@ Here's some Swift tips & tricks.
 [#3 Enum allCases](https://github.com/necatievrenyasar/SwiftTipsTricks#3-enum-allcases)   
 [#2 For with Where](https://github.com/necatievrenyasar/SwiftTipsTricks#2-for-with-where)   
 [#1 Optional Chaining](https://github.com/necatievrenyasar/SwiftTipsTricks#1-optional-chaining)   
+
+
+
+## [#10 deinit](http://swiftevreni.com)
+
+🐝 `deinit` function is called before your class is deallocated the memory spaces.`deinit` function is avaliable only in class type.
+
+```swift
+class DetailViewController: UIViewController {
+  ....
+
+  deinit {
+      NotificationCenter.default.removeObserver(self)
+   }
+}
+```
+
+
+
+
 
 ## [#9 compactMap](http://swiftevreni.com)
 
