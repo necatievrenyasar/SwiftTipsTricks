@@ -5,6 +5,7 @@ Here's some Swift tips & tricks.
 
 ## Table of contents
 
+[#11 Generic with Where Clause](https://github.com/necatievrenyasar/SwiftTipsTricks#11-generic-with-where-clause)   
 [#10 deinit](https://github.com/necatievrenyasar/SwiftTipsTricks#10-deinit)   
 [#9 compactMap](https://github.com/necatievrenyasar/SwiftTipsTricks#9-compactmap)   
 [#8 CustomStringConvertible](https://github.com/necatievrenyasar/SwiftTipsTricks#8-customstringconvertible)   
@@ -18,9 +19,34 @@ Here's some Swift tips & tricks.
 
 
 
+## [#11 Generic with Where Clause](http://swiftevreni.com)
+
+🥽 `Where` clause help you to filter in values of generic type. 
+
+```swift
+struct Location {
+    let lat: Double
+    let lon: Double
+}
+extension Location: CustomDebugStringConvertible {
+    var description: String {
+        return "mLat \(lat), mLon: \(lon)"
+    }
+}
+
+//Logger that is work only class/struct is extended CustomDebugStringConvertible
+struct Logger<T> where T: CustomDebugStringConvertible {
+    func debug(ref: T) {
+        print(ref)
+    }
+}
+```
+
+
+
 ## [#10 deinit](http://swiftevreni.com)
 
-🐝 `deinit` function is called before your class is deallocated the memory spaces.`deinit` function is avaliable only in class type.
+👓 `deinit` function is called before your class is deallocated the memory spaces.`deinit` function is avaliable only in class type.
 
 ```swift
 class DetailViewController: UIViewController {
