@@ -6,6 +6,7 @@ Here's some Swift tips & tricks.
 ## Table of contents
 
 
+[#9 compactMap](https://github.com/necatievrenyasar/SwiftTipsTricks#9-compactmap)   
 [#8 CustomStringConvertible](https://github.com/necatievrenyasar/SwiftTipsTricks#8-customstringconvertible)   
 [#7 Optional Protocol](https://github.com/necatievrenyasar/SwiftTipsTricks#7-optional-protocol)   
 [#6 Unique Array](https://github.com/necatievrenyasar/SwiftTipsTricks#6-unique-array)   
@@ -15,7 +16,23 @@ Here's some Swift tips & tricks.
 [#2 For with Where](https://github.com/necatievrenyasar/SwiftTipsTricks#2-for-with-where)   
 [#1 Optional Chaining](https://github.com/necatievrenyasar/SwiftTipsTricks#1-optional-chaining)   
 
-## [#8 CustomStringConvertible
+## [#9 compactMap](http://swiftevreni.com)
+
+🐝 `compactMap` is function like `map` . That functions applies a transformation to each of elements in a array. However  `compactMap` is automatically removes `nil` elements from the returned array.
+
+
+```swift
+let stringsArray = ["4","5","six","7","ten"]
+let intsArray = stringsArray.compactMap {Int($0)}
+print(intsArray)
+//[4, 5, 7]
+```
+
+
+
+
+
+## [#8 CustomStringConvertibel](http://swiftevreni.com)
 
 🐊 `CustomStringConvertible` is a protocol that can be implemented on Class and Struct to readable print. 
 
