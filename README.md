@@ -5,7 +5,6 @@ Here's some Swift tips & tricks.
 
 ## Table of contents
 
-
 [#9 compactMap](https://github.com/necatievrenyasar/SwiftTipsTricks#9-compactmap)   
 [#8 CustomStringConvertible](https://github.com/necatievrenyasar/SwiftTipsTricks#8-customstringconvertible)   
 [#7 Optional Protocol](https://github.com/necatievrenyasar/SwiftTipsTricks#7-optional-protocol)   
