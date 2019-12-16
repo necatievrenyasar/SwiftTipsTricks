@@ -5,6 +5,7 @@ Here's some Swift tips & tricks.
 
 ## Table of contents
 
+[#12 Convenience init](https://github.com/necatievrenyasar/SwiftTipsTricks#12-convenience-init)   
 [#11 Generic with Where Clause](https://github.com/necatievrenyasar/SwiftTipsTricks#11-generic-with-where-clause)   
 [#10 deinit](https://github.com/necatievrenyasar/SwiftTipsTricks#10-deinit)   
 [#9 compactMap](https://github.com/necatievrenyasar/SwiftTipsTricks#9-compactmap)   
@@ -19,6 +20,32 @@ Here's some Swift tips & tricks.
 
 
 
+## [#12 convenience init](http://swiftevreni.com)
+
+🥽 `convenience init` calles designated initializers with pre-set parameters.
+
+```swift
+class Person {
+    var name: String
+    var id:Int
+    var photo: UIImage
+    
+    init(name:String, id: Int, photo: UIImage) {
+        self.name = name
+        self.id = id
+        self.photo = photo
+    }
+    
+    convenience init(id: Int) {
+        self.init(name: "[Unnamed]", id: id, photo: UIImage(named: "default_photo")!)
+    }    
+}
+```
+
+
+
+
+
 ## [#11 Generic with Where Clause](http://swiftevreni.com)
 
 🥽 `Where` clause help you to filter in values of generic type. 
@@ -30,7 +57,7 @@ struct Location {
 }
 extension Location: CustomDebugStringConvertible {
     var description: String {
-        return "mLat \(lat), mLon: \(lon)"
+        return "Location: \(lat),\(lon)"
     }
 }
 
