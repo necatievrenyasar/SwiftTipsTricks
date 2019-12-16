@@ -5,6 +5,7 @@ Here's some Swift tips & tricks.
 
 ## Table of contents
 
+[#13 Failable init](https://github.com/necatievrenyasar/SwiftTipsTricks#13-failable-init)   
 [#12 Convenience init](https://github.com/necatievrenyasar/SwiftTipsTricks#12-convenience-init)   
 [#11 Generic with Where Clause](https://github.com/necatievrenyasar/SwiftTipsTricks#11-generic-with-where-clause)   
 [#10 deinit](https://github.com/necatievrenyasar/SwiftTipsTricks#10-deinit)   
@@ -20,9 +21,37 @@ Here's some Swift tips & tricks.
 
 
 
+## [#13 Failable init](http://swiftevreni.com)
+
+ 🐸You can prefer `failable initializer` for avoid to create object with invalid parameters.
+
+```swift
+enum AppState{
+    case login, register
+    
+    init?(rawValue:Int) {
+        switch rawValue {
+        case 0:
+            self = .login
+        case 1:
+            self = .register
+        default:
+            return nil
+        }
+    }
+}
+
+print(AppState(rawValue: 3))
+//nil
+```
+
+
+
+
+
 ## [#12 convenience init](http://swiftevreni.com)
 
-🥽 `convenience init` calles designated initializers with pre-set parameters.
+🦋 `convenience init` calles designated initializers with pre-set parameters.
 
 ```swift
 class Person {
