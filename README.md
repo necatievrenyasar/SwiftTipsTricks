@@ -4,7 +4,7 @@ Here's some Swift tips & tricks.
 
 
 ## Table of contents
-
+[#14 Variadic Functions](https://github.com/necatievrenyasar/SwiftTipsTricks#14-variadic-functions)   
 [#13 Failable init](https://github.com/necatievrenyasar/SwiftTipsTricks#13-failable-init)   
 [#12 Convenience init](https://github.com/necatievrenyasar/SwiftTipsTricks#12-convenience-init)   
 [#11 Generic with Where Clause](https://github.com/necatievrenyasar/SwiftTipsTricks#11-generic-with-where-clause)   
@@ -18,6 +18,26 @@ Here's some Swift tips & tricks.
 [#3 Enum allCases](https://github.com/necatievrenyasar/SwiftTipsTricks#3-enum-allcases)   
 [#2 For with Where](https://github.com/necatievrenyasar/SwiftTipsTricks#2-for-with-where)   
 [#1 Optional Chaining](https://github.com/necatievrenyasar/SwiftTipsTricks#1-optional-chaining)   
+
+
+
+## [#14 Variadic Functions](http://swiftevreni.com)
+
+👾 Variadic functions takes zero or more input values of a specified type. To work with a variadic function, you just add … after any parameter.
+
+```swift
+func sum(_ numbers: Double...) -> Double {
+    var total: Double = 0
+    for number in numbers {
+        total += number
+    }
+    return total
+}
+
+print(sum(1, 2, 3, 4, 5))
+//15
+```
+
 
 
 
