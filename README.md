@@ -4,6 +4,7 @@ Here's some Swift tips & tricks.
 
 
 ## Table of contents
+[#14 Email Validation](https://github.com/necatievrenyasar/SwiftTipsTricks#15-email-validation)   
 [#14 Variadic Functions](https://github.com/necatievrenyasar/SwiftTipsTricks#14-variadic-functions)   
 [#13 Failable init](https://github.com/necatievrenyasar/SwiftTipsTricks#13-failable-init)   
 [#12 Convenience init](https://github.com/necatievrenyasar/SwiftTipsTricks#12-convenience-init)   
@@ -19,6 +20,25 @@ Here's some Swift tips & tricks.
 [#2 For with Where](https://github.com/necatievrenyasar/SwiftTipsTricks#2-for-with-where)   
 [#1 Optional Chaining](https://github.com/necatievrenyasar/SwiftTipsTricks#1-optional-chaining)   
 
+
+## [#15 Email Validation](http://swiftevreni.com)
+🌜 To check email validation, regex is best way.
+
+```swift
+extension String {
+    var isValidEmail: Bool {
+        if self.isEmpty {
+            return false
+        }
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        return emailPred.evaluate(with: self)
+    }
+}
+
+
+print("evren@necatievren.com".isValidEmail)
+```
 
 
 ## [#14 Variadic Functions](http://swiftevreni.com)
