@@ -4,7 +4,7 @@ Here's some Swift tips & tricks.
 
 
 ## Table of contents
-[#14 Email Validation](https://github.com/necatievrenyasar/SwiftTipsTricks#15-email-validation)   
+[#15 Email Validation](https://github.com/necatievrenyasar/SwiftTipsTricks#15-email-validation)   
 [#14 Variadic Functions](https://github.com/necatievrenyasar/SwiftTipsTricks#14-variadic-functions)   
 [#13 Failable init](https://github.com/necatievrenyasar/SwiftTipsTricks#13-failable-init)   
 [#12 Convenience init](https://github.com/necatievrenyasar/SwiftTipsTricks#12-convenience-init)   
